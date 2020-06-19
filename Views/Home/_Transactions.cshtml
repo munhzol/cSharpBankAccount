@@ -1,0 +1,21 @@
+@model List<Transaction>
+
+<p>
+    <h4>Your transactions</h4>
+</p>
+
+<table class="table border">
+    <tr>
+        <th>Amount</th>
+        <th>Date</th>
+    </tr>
+
+    @foreach (Transaction t in Model)
+    {
+        <tr>
+            <td>@t.Amount</td>
+            <td>@t.CreatedAt</td>
+        </tr>
+    }
+
+</table>
